@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Light Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    
+  
+  
+  </head>
+  <body>
+    <h1 id="CustomTitle" class="hidden" style="color:white">
+      Custom Mode
+    </h1>
+    <div id = "Tutorial" class = "hidden">
+      <h1 style="color:white">
+        Game Rules
+      </h1>
+      <table border= "2px" height="20" width="100%" >
+        <tr align = "center" >
+          <th>Difficulty: </th>
+          <th><u>Easy </u></th>
+          <th><u>Medium </u></th>
+          <th><u>Hard </u></th>
+          <th><u>Impossible </u></th>
+          </tr>
+        <tr align = "center">
+          <th>Rounds: </th>
+          <th>4 Rounds</th>
+          <th>8 Rounds</th>
+          <th>10 Rounds</th>
+          <th>12 Rounds</th>
+        </tr>
+        <tr align = "center">
+          <th>Boxes: </th>
+          <th>3 Boxes</th>
+          <th>6 Boxes</th>
+          <th>9 Boxes</th>
+          <th>9 Boxes</th>
+        </tr>
+        <tr>
+          <th>Lives:</th>
+          <th>3 Lives</th>
+          <th>2 Lives</th>
+          <th>1 Life</th>
+          <th>1 Life</th>
+        </tr>
+        <tr>
+          <th>Color/Sound: </th>
+          <th>Color&Sound </th>
+          <th>Color&Sound </th>
+          <th>Color&Sound </th>
+          <th>Sound Only </th>
+        </tr>
+      </table>
+      
+      <br>
+      <h3 id = "bodyText" style="color:white">
+      Repeat the pattern back to win the game! 
+    </h3>
+    </div>
+    
+    <!-- this is the start of content -->
+    <h1 id="Title" class="hidden" style="color:white">
+      Light and Sound Memory Game
+    </h1>
+    
+    <!---
+    <div class="Time2">
+    <p>Lives Left: </p>    
+    <p id="count-el">3</p>
+    </div>
+    <div class="Time2">
+    <p>Time: </p>
+    <p id="time-el"> 60</p>
+</div>
+--->
+    
+    <h1 id="Score" class="hidden" style="color:white">
+      Results
+    </h1>
+    <div id ="Lives" class="hidden">
+    <p>Lives Left: </p>    
+    <p id="count-el">3</p>
+    </div>
+    <div id="Time2" class="hidden">
+    <p>Time: </p>
+    <p id="time-el"> 60</p>
+    </div>
+
+    <div id="gameArea">
+    <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)" class="hidden"></button>
+    <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)" class="hidden"></button>
+    <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)" class="hidden"></button>
+    <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)" class="hidden"></button>
+    <button id="button5" class="hidden" onmousedown="startTone(5)" onmouseup="stopTone()" onclick="guess(5)"></button>
+    <button id="button6" class="hidden" onmousedown="startTone(6)" onmouseup="stopTone()" onclick="guess(6)"></button>
+    <button id="button7" class="hidden" onmousedown="startTone(7)" onmouseup="stopTone()" onclick="guess(7)"></button>
+    <button id="button8" class="hidden" onmousedown="startTone(8)" onmouseup="stopTone()" onclick="guess(8)"></button>
+    <button id="button9" onmousedown="startTone(9)" onmouseup="stopTone()" onclick="guess(9)" class="hidden"></button>
+    </div>
+    <button id="StartBtn" onclick="Levels()">Start</button>
+    <button id="CampBtn" class="hidden" onclick="Difficulty()">Campaign</button>
+    
+    <div class="Diff">
+    <button id="EasyBtn" class="hidden" onclick="Easy()">Easy</button>
+    <button id="MediumBtn" class="hidden" onclick="Medium()">Medium</button>
+    <button id="HardBtn" class="hidden" onclick="Hard()">Hard</button>
+    <button id="ImpossibleBtn" class="hidden" onclick="Impossible()">Impossible</button>
+    </div>
+    <!---
+    <button id="butt" onclick="upload()">
+      Butt
+    </button>
+--->
+    <div id="TimeBar" class="hidden">
+      <label id="WordBar" for="file">Time</label>
+      <progress id="file" value="0" max="100"> 0% </progress>
+    </div>
+    <div id="ProgressBar" class="hidden">
+      <label for="file">Progress Bar</label>
+      <progress id="Pro" value="0" max="100"> 0% </progress>
+    </div>
+    
+    <br>
+    <button id="TutorialBtn" onclick = "Tutorial()">Tutorial</button>
+    <br>
+    <button id = "Play" onclick = "PlayGround()">
+      PlayGround
+    </button>
+    <button id="CustomBtn" class="hidden" onclick = "Custom()">Custom</button>
+    <br>
+    <div id="Heart" class="hidden"
+         <p>&#128150;
+  </div>
+  <div id="Heart2" class="hidden"
+         <p>&#128150;
+  </div>
+  <div id="Heart3" class="hidden"
+         <p>&#128150;
+  </div>
+
+     <p id = "BoxText" class="hidden">
+     Boxes:
+  </p> 
+  <select id="myBox" size="9" class="hidden">
+  <option>1 Box</option>
+  <option>2 Boxes</option>
+  <option>3 Boxes</option>
+  <option>4 Boxes</option>
+  <option>5 Boxes</option>
+  <option>6 Boxes</option>
+  <option>7 Boxes</option>
+  <option>8 Boxes</option>
+  <option>9 Boxes</option>  
+</select>
+  
+  <p id = "LivesText" class="hidden" style = "position:relative; bottom: 200px; left: 100px;">
+     Lives:
+  </p> 
+  <select id="myLives" size="3" style = "position:relative; bottom: 200px; left: 100px;" class="hidden">
+  <option>1 Life</option>
+  <option>2 Lives</option>
+  <option>3 Lives</option>
+
+ 
+</select>
+
+  <p id = "RoundsText" class="hidden" style = "position:relative; bottom: 350px; left: 200px;">
+     Rounds:
+  </p> 
+  <select id="myRounds" size="12" style = "position:relative; bottom: 350px; left: 200px;" class="hidden">
+  <option>1 Round</option>
+  <option>2 Rounds</option>
+  <option>3 Rounds</option>
+  <option>4 Rounds</option>
+  <option>5 Rounds</option>
+  <option>6 Rounds</option>
+  <option>7 Rounds</option>
+  <option>8 Rounds</option>
+  <option>9 Rounds</option>
+  <option>10 Rounds</option>
+  <option>11 Rounds</option>
+  <option>12 Rounds</option>
+ 
+</select>
+
+  <p id = "TimeText" class="hidden" style = "position:relative; bottom: 608px; left: 330px;">
+     Time:
+  </p> 
+  <select id="myTime" size="8" style = "position:relative; bottom: 608px; left: 330px;" class="hidden">
+  <option>10 Seconds</option>
+  <option>20 Seconds</option>
+  <option>30 Seconds</option>
+  <option>40 Seconds</option>
+  <option>50 Seconds</option>
+  <option>60 Seconds</option>
+  <option>70 Seconds</option>
+  <option>80 Seconds</option>
+ 
+ 
+</select>
+
+
+
+<button id="Index" type="button" onclick="myFunction()" style = "position:relative; bottom: 300px; top: auto; left: auto;" class="hidden" >Display index</button>
+
+    <button id="MenuBtn" class="hidden" style = "position:relative; bottom: 50px; left: auto;" onclick="Menu()">Menu</button>
+
+    <button id="MenuBtn2" class="hidden" style = "position:relative; bottom: 220px; left: auto;" onclick="Menu()">Menu</button>
+
+<button id="MenuBtn3" class="hidden" style = "position:relative; bottom: 280px; left: auto;" onclick="Menu()">Menu</button>
+    
+    <div id = "CustomMode" class = "hidden">
+  </div>
+  
+
+   <!--- <img id = "HeartPic1" class = "Heart" src = "https://image.shutterstock.com/image-vector/pixel-vector-heart-red-pixelated-260nw-1488911354.jpg">
+        <img id = "HeartPic2" class = "Heart" src = "https://image.shutterstock.com/image-vector/pixel-vector-heart-red-pixelated-260nw-1488911354.jpg">
+    <img id = "HeartPic3" class = "Heart" src = "https://image.shutterstock.com/image-vector/pixel-vector-heart-red-pixelated-260nw-1488911354.jpg">
+--->
+    
+    <!---<img src= "http://g.recordit.co/Q34RmhhyCH.gif" style= "width:480px; height:480px;">--->
+  </body>
+</html>
