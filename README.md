@@ -72,7 +72,7 @@ If I had more time I will add more desing to the Game to make it look better. Pr
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording] https://www.youtube.com/watch?v=eB35dzeQCac
 
 
 ## License
