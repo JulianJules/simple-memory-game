@@ -6,9 +6,10 @@
 
 Submitted by: Julian Arias
 
-Time spent: **#** hours spent in total
+Time spent: 20 hours spent in total
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: https://glitch.com/edit/#!/intriguing-flat-border?path=script.js%3A1%3A0
+Link to Game: https://intriguing-flat-border.glitch.me/
 
 ## Required Functionality
 
