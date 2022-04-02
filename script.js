@@ -45,7 +45,7 @@ function myFunction() {
   Ro = myRounds;
 //alert(myRounds)
   RandomPattern(myBox, myRounds)
-  }
+  
   //alert(myTime);
 
 
@@ -138,6 +138,7 @@ function myFunction() {
   //document.getElementById("Heart2").classList.remove("hidden")
   Lives = myLives
   startGame();
+  }
   //alert(myBox);
   
   //alert(myRounds);
@@ -319,7 +320,7 @@ function Medium () {
   
   document.getElementById("Heart").classList.remove("hidden")
   document.getElementById("Heart2").classList.remove("hidden")
-  document.getElementById("Heart3").classList.remove("hidden")
+  
   color = true;
 }
 function Hard () {
@@ -343,8 +344,7 @@ function Hard () {
   document.getElementById("ProgressBar").classList.remove("hidden")
   
   document.getElementById("Heart").classList.remove("hidden")
-  document.getElementById("Heart2").classList.remove("hidden")
-  document.getElementById("Heart3").classList.remove("hidden")
+
   color = true;
   time = 40;
   TimeDiff = 40;
@@ -365,8 +365,7 @@ function Impossible () {
   document.getElementById("ProgressBar").classList.remove("hidden")
   
   document.getElementById("Heart").classList.remove("hidden")
-  document.getElementById("Heart2").classList.remove("hidden")
-  document.getElementById("Heart3").classList.remove("hidden")
+  
   color = false;
   time = 40;
   TimeDiff = 40;
