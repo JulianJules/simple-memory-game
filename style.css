@@ -1,0 +1,161 @@
+h1 {
+  
+  font-family: Verdana, arial, sans-serif;
+  text-align:center;
+}
+body {
+  background-color: #747880;
+}
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+    outline: none;
+  display: flex;
+  justify-content: center;
+    padding: 3px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+    color: white;
+    background: black;
+}
+
+.selected {
+    color: white;
+    background: black;
+}
+
+.Diff {
+  flex-wrap: nowrap;
+  display: flex;
+  align-items:center;
+}
+
+#gameArea button{
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+}
+#gameArea {
+  /*border: solid;*/
+  width: auto;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color:#747880;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: 250px 250px 250px;
+  
+  justify-content: flex-start;
+  justify-content: center;
+  
+}
+
+#button1 {
+background-color: lightgreen;
+}
+#button1:active, #button1.lit {
+    background-color: green;
+}
+#button2 {
+    background-color: lightblue;
+}
+#button2:active, #button2.lit {
+    background-color: blue;
+}
+#button3 {
+    background-color: pink;
+}
+#button3:active, #button3.lit {
+    background-color: red;
+}
+#button4 {
+    background-color: gray;
+}
+#button4:active, #button4.lit {
+    background-color: black;
+}
+#button5 {
+    background-color: orange;
+ }
+#button5:active, #button5.lit {
+    background-color: brown;
+}
+#button6 {
+    background-color: lightyellow;
+}
+#button6:active, #button6.lit {
+    background-color: yellow;
+}
+#button7 {
+    background-color: white;
+}
+#button7:active, #button7.lit {
+    background-color: purple;
+}
+#button8 {
+    background-color: rgb(0, 255, 255);
+}
+#button8:active, #button8.lit {
+    background-color: rgb(158, 95, 95);
+}
+#button9 {
+    background-color: rgb(47, 88, 49);
+}
+#button9:active, #button9.lit {
+    background-color: rgb(233, 145, 218);
+}
+
+#TimeBar {
+  text-align:center;
+  margin-top: 100px;
+}
+#ProgressBar {
+  text-align:center;
+  margin-right: 51px;
+  margin-top: 10px;
+}
+#MenuBtn {
+  margin-top: 100px;
+}
+
+#Heart{
+  position:relative;
+  text-align: center;
+  right: 25px;
+}
+#Heart2{
+  text-align: center;
+  position:relative;
+ 
+  bottom: 21px;
+  right:1px;
+}
+#Heart3{
+  text-align: center;
+  position:relative;
+  
+  bottom: 42px;
+  left:23px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+
